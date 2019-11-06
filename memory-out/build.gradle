@@ -1,0 +1,36 @@
+plugins {
+	id 'org.springframework.boot' version '2.1.8.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+	id 'java'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+    // Use jcenter for resolving dependencies.
+    // You can declare any Maven/Ivy/file repository here.
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-autoconfigure
+	compile group: 'org.springframework.boot', name: 'spring-boot-autoconfigure', version: '2.1.7.RELEASE'
+	
+	// https://mvnrepository.com/artifact/org.springframework/spring-web
+	compile group: 'org.springframework', name: 'spring-web', version: '5.1.9.RELEASE'
+	
+	// https://mvnrepository.com/artifact/io.prometheus/simpleclient
+	compile group: 'io.prometheus', name: 'simpleclient', version: '0.6.0'
+	
+	// https://mvnrepository.com/artifact/io.prometheus/simpleclient_hotspot
+	compile group: 'io.prometheus', name: 'simpleclient_hotspot', version: '0.6.0'
+	
+	// https://mvnrepository.com/artifact/io.prometheus/simpleclient_httpserver
+	compile group: 'io.prometheus', name: 'simpleclient_httpserver', version: '0.6.0'
+	
+}
